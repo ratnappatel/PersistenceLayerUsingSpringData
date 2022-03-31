@@ -29,15 +29,15 @@ public class CustomerApplication implements CommandLineRunner {
 		String name=sc.next();
 		System.out.println("Enter stream ");
 		String stream=sc.next();
+		
+		// Student entity object in New State
 		Student student=new Student();
 		student.setRollno(rollno);
 		student.setName(name);
 		student.setStream(stream);
 		
 		String result=studentRepository.insertData(student);
-		System.out.println(result);
-	
-		
+		System.out.println(result);		
 	}
 	
 	
